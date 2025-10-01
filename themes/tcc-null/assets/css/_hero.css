@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
 .hero {
-    @apply h-screen bg-gray-900 mb-5;
+    @apply h-screen bg-gray-900 mb-5 relative isolate;
+    img {
+        @apply absolute top-0 left-0 w-full h-full object-cover
+    }
 }
 
 .mini-hero {

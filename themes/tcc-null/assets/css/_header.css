@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 header {
-    @apply fixed top-0 bg-black/80 backdrop-blur-lg w-full flex gap-2 justify-between h-10 border-b border-green-600;
+    @apply fixed top-0 bg-black/80 backdrop-blur-lg w-full flex gap-2 justify-between h-10 border-b border-green-600 z-50;
 
     nav {
 
