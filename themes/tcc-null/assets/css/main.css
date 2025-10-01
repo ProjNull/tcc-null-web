@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@source "hugo_stats.json";
+
+@import "_header.css";
+@import "_hero.css";
+@import "_posts.css";
+
+
+
+body {
+  @apply bg-black text-white font-mono;
+}
+
+main {
+  @apply pt-10;
+}
+
+main.home {
+  @apply pt-0;
+}
+
+footer {
+  @apply text-center text-gray-700 pt-10;
+}
+
+.content {
+  @apply max-w-prose mx-auto px-2 md:px-0;
+  transition: padding 1s;
+  .title {
+    @apply text-4xl font-bold;
+  }
+}

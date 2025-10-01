@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+.hero {
+    @apply h-screen bg-gray-900 mb-5;
+}
+
+.mini-hero {
+    @apply h-50 bg-gradient-to-tl flex items-end px-2 py-2 lg:px-20 lg:py-10 from-green-950 to-green-600 mb-5;
+    h1 {
+        @apply text-4xl font-bold;
+    }
+
+    &[variant="page"] {
+        @apply from-green-800 to-green-500 ;
+    }
+
+    &[variant="tax"] {
+        @apply bg-gradient-to-bl  from-green-800 to-green-500 ;
+    }
+
+    &[variant="term"] {
+        @apply bg-gradient-to-b from-green-950 to-green-500 ;
+    }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <header>
+    <div class="flex items-center justify-between w-full max-w-[100ch] mx-auto h-full">
+      {{ partial "header.html" . }}
+    </div>
+  </header>
+  <main {{ if .IsHome}}class="home"{{end}}>
+    <noscript>
+      <div class="bg-red-900 text-center" >Site Does not work correctly without JS!</div>
+    </noscript>
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer>
+    {{ partial "footer.html" . }}
+  </footer>
+</body>
+</html>

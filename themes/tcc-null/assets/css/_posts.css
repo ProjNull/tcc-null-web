@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+.posts {
+    @apply flex flex-col gap-2;
+
+    .post {
+        @apply block p-2 border border-gray-800;
+        .main-info {
+            @apply flex items-center justify-between;
+        }
+        .date {
+            @apply text-xs opacity-80;
+        }
+        .tags {
+            @apply text-xs pt-1;
+            .tag {
+                @apply bg-gray-950 border border-gray-800 px-1;
+            }
+        }
+
+        hr {
+            @apply border-gray-900;
+        }
+
+        &:hover {
+            @apply bg-green-950 border-green-800;
+
+            hr {
+                @apply border-green-900;
+            }
+
+            .tags .tag {
+                @apply bg-green-950 border border-green-800 px-1;
+            }
+        }
+    }
+}

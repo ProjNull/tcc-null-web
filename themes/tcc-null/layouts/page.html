@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <div class="mini-hero" variant="page">
+    <div class="hero-content">
+      <h1>{{ .Title }}</h1>
+      <div class="details">
+        {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+        {{ $dateHuman := .Date | time.Format ":date_long" }}
+        <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="prose prose-invert">
+      {{ .Content }}
+    </div>
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  </div>
+{{ end }}

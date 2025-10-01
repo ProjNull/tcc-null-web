@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <div class="mini-hero">
+    <h1>{{ .Title }}</h1>
+  </div>
+  <div class="content">
+    {{ .Content }}
+
+
+    <div class="posts">
+      {{ range .Pages }}
+        <a class="post" href="{{ .RelPermalink }}">
+          <div class="main-info">
+            <span>{{ .LinkTitle }}</span>
+            <span class="date">
+              {{time.Format "2 Jan 2025" .Date}}
+            </span>
+          </div>
+          {{ if and (isset .Params "tags")}}
+            <hr class="info-split">
+            <div class="tags">
+              {{ range .Params.tags }}
+                <span class="tag">{{ . }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+        </a>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

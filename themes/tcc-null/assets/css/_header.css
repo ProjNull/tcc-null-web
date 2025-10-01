@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+header {
+    @apply fixed top-0 bg-black/80 backdrop-blur-lg w-full flex gap-2 justify-between h-10 border-b border-green-600;
+
+    nav {
+
+        @apply h-full;
+        ul {
+
+            @apply flex h-full;
+
+            li a {
+                @apply h-full flex items-center px-2 border-x border-transparent;
+
+                &:hover {
+                    @apply bg-green-950 border-green-600;
+                }
+                &[aria-current="page"], 
+                &[aria-current="page"]:hover {
+                    @apply bg-green-600 border-green-600 text-black;
+                }
+                
+            }
+            
+        }
+    }
+}
