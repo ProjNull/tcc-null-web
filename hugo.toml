@@ -7,6 +7,10 @@ theme = "tcc-null"
 
 summaryLength = 2
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [build]
   [build.buildStats]
     enable = true
