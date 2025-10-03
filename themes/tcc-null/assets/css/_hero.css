@@ -1,27 +1,30 @@
 @import "tailwindcss";
 
 .hero {
-    @apply h-screen bg-gray-900 mb-5 relative isolate;
+    @apply h-100 md:h-screen bg-gray-900 mb-5 relative isolate border-green-950 border-b;
     img {
-        @apply absolute top-0 left-0 w-full h-full object-cover
+        @apply absolute top-0 left-0 w-full h-full object-cover;
+    }
+    video {
+        @apply absolute top-0 left-0 w-full h-full object-cover;
     }
 }
 
 .mini-hero {
-    @apply h-50 bg-gradient-to-tl flex items-end px-2 py-2 lg:px-20 lg:py-10 from-green-950 to-green-600 mb-5;
+    @apply h-50 bg-gradient-to-tl flex items-end px-2 py-2 lg:px-20 lg:py-10 border-green-950 border-b from-green-950 to-green-600 mb-5;
     h1 {
         @apply text-4xl font-bold;
     }
 
     &[variant="page"] {
-        @apply from-green-800 to-green-500 ;
+        @apply from-green-800 to-green-500;
     }
 
     &[variant="tax"] {
-        @apply bg-gradient-to-bl  from-green-800 to-green-500 ;
+        @apply bg-gradient-to-bl  from-green-800 to-green-500;
     }
 
     &[variant="term"] {
-        @apply bg-gradient-to-b from-green-950 to-green-500 ;
+        @apply bg-gradient-to-b from-green-950 to-green-500;
     }
 }

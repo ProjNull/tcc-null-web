@@ -23,7 +23,8 @@
       "span",
       "time",
       "title",
-      "ul"
+      "ul",
+      "video"
     ],
     "classes": [
       "active",
