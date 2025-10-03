@@ -7,6 +7,27 @@ theme = "tcc-null"
 
 summaryLength = 2
 
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+
+  [[menus.main]]
+    name = 'Team'
+    pageRef = '/team'
+    weight = 11
+
+  [[menus.main]]
+    name = 'Blog'
+    pageRef = '/posts'
+    weight = 20
+
+  [[menus.main]]
+    name = 'Tags'
+    pageRef = '/tags'
+    weight = 30
+
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
