@@ -3,6 +3,7 @@
     "tags": [
       "a",
       "body",
+      "button",
       "div",
       "footer",
       "h1",
@@ -44,6 +45,7 @@
       "main-info",
       "max-w-[100ch]",
       "mini-hero",
+      "mobile-btn",
       "mx-auto",
       "post",
       "posts",
@@ -55,6 +57,10 @@
       "text-center",
       "w-full"
     ],
-    "ids": null
+    "ids": [
+      "main-menu",
+      "main-menu-close",
+      "main-menu-open"
+    ]
   }
 }

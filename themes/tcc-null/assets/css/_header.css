@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 header {
-    @apply fixed top-0 bg-black/80 backdrop-blur-lg w-full flex gap-2 justify-between h-10 border-b border-green-600 z-50;
+    @apply fixed px-3 lg:px-0 top-0 bg-black/80 backdrop-blur-lg w-full flex gap-2 justify-between h-10 border-b border-green-600 z-50;
 
+    .mobile-btn {
+        @apply hidden;
+    }
     nav {
-
-        @apply h-full;
+        @apply flex h-full;
         ul {
-
             @apply flex h-full;
 
             li a {
@@ -16,13 +17,37 @@ header {
                 &:hover {
                     @apply bg-green-950 border-green-600;
                 }
-                &[aria-current="page"], 
+                &[aria-current="page"],
                 &[aria-current="page"]:hover {
                     @apply bg-green-600 border-green-600 text-black;
                 }
-                
             }
-            
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    header {
+        .mobile-btn {
+            @apply block;
+        }
+        #main-menu-open {
+            @apply text-right bg-green-600 h-full text-black px-2;
+        }
+        nav {
+            #main-menu-close {
+                @apply w-full text-right p-2 border border-gray-900;
+            }
+            @apply flex-col gap-2 fixed top-0 left-0 p-4  bg-black w-full h-screen translate-x-full transition-transform;
+            &.open {
+                @apply translate-x-0;
+            }
+            ul {
+                @apply flex-col gap-2;
+                li a {
+                    @apply h-full flex items-center py-2 border border-gray-900;
+                }
+            }
         }
     }
 }
